@@ -1,0 +1,74 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	 background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+.body-deactive{
+	background-color: rgba(0,0,0,0.4);
+}
+div.header {
+    height: 70px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.header .logo{
+	color: #5e5e5e;
+	font-size: 30px;
+	padding-top: 20px;
+}
+.user-content table.table-user-info tr.tr-Header th{
+	background-color: #2ecc71;
+	border-left: 1px solid #FFFFFF;
+	cursor: pointer;
+	font-size: 12px;
+}
+.even{
+	background-color: #CCCCCC;	
+}
+table.table-user-info{
+	border: 1px solid #2ecc71;
+	margin: 10px auto;
+	margin-top: 25px;
+}
+tr.tr-user-data td{
+	border-bottom: 1px solid #2ecc71;
+	border-left: 1px solid #2ecc71; 
+	font-size: 12px;
+	white-space: pre;
+}
+.popbox{
+	width:75%;
+	height:500px;
+	overflow: scroll;
+	border: 1px solid #CCCCCC;
+	margin: auto;
+	position: fixed;
+	top:10px;
+	left:12.5%;
+	z-index: 9999;
+	background-color: #FFFFFF;
+}
+.pop-close-label{
+	font-weight: bold;
+	display: block;
+	float: right;
+	padding: 5px;
+	cursor: pointer; 
+	color: red;
+	font-size:22px;
+}
+.pop-close-label:hover{
+	background-color: #CCCCCC;
+}
+.pop-title {
+    text-align: left;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.user-info-label {
+    margin: auto;
+    width: 135px;
+    cursor: pointer;
+    color: blue;
+    margin-top: 16px;
+}
