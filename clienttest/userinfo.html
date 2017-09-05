@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head> 
+
+		<title>User Information</title>
+		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Custom CSS scripts-->
+		<link rel="stylesheet" href="scripts/userinfo.css?v=1.0">
+
+		<!-- Include Angular Library version 1.6.4 -->
+		<script src="lib/angular.min.js"></script>
+
+		<!-- Custom javascripts scripts-->
+		<script src="scripts/app.userinfo.js?v=1.0"></script>
+
+		
+	</head>
+	<body ng-app="userInfo" ng-class="bodyactive" ng-controller="userInfo" >
+		<div class="header">
+			<div class="logo">User Management System</div>
+		</div>
+
+		<div class="main-content" >
+			<div class="user-info-label" ng-click="showUserPopUp()">Show User Details</div>
+		</div>	
+
+		<!-- PopUp content -->
+		<div class="user-content popbox" ng-show="showPOP">
+			<!-- Pop up header -->
+			<div class="pop-header" title="close"><span class="pop-title"> User Information </span> <span class="pop-close-label" ng-click="closeUserPopUp()" >X</span> </div>
+
+			<!-- Pop up main content-->
+			<table border="0" cellpadding="5" cellspacing="0" class="table-user-info">
+				<tr class="tr-Header">
+					<th ng-click="doSort('userId')">User ID</th>
+					<th ng-click="doSort('id')">ID</th>
+					<th ng-click="doSort('title')">Title</th>
+					<th ng-click="doSort('body')">Body</th>
+				</tr>
+				<tr ng-repeat="user in usersInfo | orderBy: sortCol"  ng-class-odd="'odd'" ng-class-even="'even'"class="tr-user-data" >
+					<td>{{user.userId}}</td>
+					<td>{{user.id}}</td>
+					<td>{{user.title}}</td>
+					<td>{{user.body}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>	
